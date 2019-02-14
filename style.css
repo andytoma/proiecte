@@ -1,8 +1,6 @@
 body{
   font-family: 'Roboto', sans-serif;
   color: #494949;
-
-  /* height: 2000px; */
 }
 
 .wrapper {
@@ -80,9 +78,12 @@ nav.navbar.white-top-menu {
 .welcome-home{
   padding: 100px 0 50px 50px;
   font-size: 20px;
-  background-color: rgba(255, 255, 255, 0.5);
   height: 800px;
   position: relative;
+}
+.welcome-home-bgc{
+  background-color: rgba(255, 255, 255, 0.5);
+
 }
 .welcome-text{
   margin: 30px 50px;
@@ -91,7 +92,7 @@ nav.navbar.white-top-menu {
   z-index: 5;
 }
 .welcome-text h1 , welcome-text h2{
-      font-weight: 700;
+  font-weight: 700;
 }
 .welcome-text h2{
   font-size: 40px;
@@ -148,13 +149,11 @@ i.fa.fa-arrow-down{
   position: relative;
 }
 .container-about{
-  position: absolute;
-  display: flex;
-  justify-content: center;
+  position: relative;
   margin-top: -200px;
 }
 .about-top{
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   font-size: 18px;
@@ -163,9 +162,13 @@ i.fa.fa-arrow-down{
   text-align: center;
   transition: all 0.3s ease-in 0s;
 }
+.about-top h3{
+  margin-top: 25px;
+
+}
 .character{
-  width: 250px;
-  height: 250px;
+  width: 290px;
+  height: 270px;
   background-color: #fff;
   margin-top: 40px;
   z-index: 2;
@@ -183,7 +186,7 @@ i.fa.fa-arrow-down{
 .character i{
   color: green;
   font-size: 60px;
-  margin: 20px;
+  margin: 40px 20px 0 20px;
   color: green;
   transition: .5s;
 }
@@ -194,9 +197,9 @@ i.fa.fa-arrow-down{
 .about-bootom{
   background-color: #F3F3F3;
   width: 100%;
-  height: 700px;
+  height: 800px;
   position: relative;
-  top: 170px;
+  top: -230px;
   display: flex;
   justify-content: center;
 }
@@ -243,32 +246,152 @@ div.about-content h3 span{
 
 section.features-area{
   position: relative;
-  margin-top: 760px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 div.container-features{
   width: 100%;
   height: 200px;
   background-color: white;
-  margin-top: -100px;
+  margin-top: -300px;
   display: flex;
-  justify-content: center;
-  padding-top: 100px;
+  flex-direction: column;
   position: relative;
+  height: auto;
 }
 div.features-top{
   display: flex;
   justify-content: center;
   display: inline-block;
   position: relative;
+  text-align: center;
 }
 div.features-top h2{
   font-size: 36px;
   letter-spacing: 2px;
   line-height: 1;
-  margin-left: 250px;
+  margin-top:90px;
+}
+div.features-top h2 span{
+  font-weight: 700;
 }
 div.features-top p{
+  margin: 0 400px;
+}
+div.features-content{
+  position: relative;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  margin: 50px;
+  box-sizing: border-box;
+}
+div.features-content div.param-list{
+  width: 530px;
+  height: 130px;
+  box-shadow: 0 0 4px;
+  margin: 15px;
 
+}
+div.features-content div.param-list:hover{
+  box-shadow:0px 0px 20px 5px  #ccc;
+}
+div.features-content div.list1::before{
+  content: "1";
+  background: green;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  height: 40px;
+  line-height: 2;
+  margin-top: 6px;
+  position: absolute;
+  text-align: center;
+  width: 40px;
+  top: -25px;
+  left: -20px;
+}
+div.features-content div.list2::before{
+  content:"2";
+  background: green;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  height: 40px;
+  line-height: 2;
+  margin-top: 6px;
+  position: absolute;
+  text-align: center;
+  width: 40px;
+  top: -25px;
+  left: -20px;
+}
+div.features-content div.list3::before{
+  content:"3";
+  background: green;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  height: 40px;
+  line-height: 2;
+  margin-top: 6px;
+  position: absolute;
+  text-align: center;
+  width: 40px;
+  top: -25px;
+  left: -20px;
+}
+div.features-content div.list4::before{
+  content:"4";
+  background: green;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  height: 40px;
+  line-height: 2;
+  margin-top: 6px;
+  position: absolute;
+  text-align: center;
+  width: 40px;
+  top: -25px;
+  left: -20px;
+
+}
+.param-list{
+  position: relative;
+  display: flex;
+}
+div.features-content i{
+  position: absolute;
+  font-size: 70px;
+  color: #37a000;
+  left: 20px;
+}
+div.all-param-list{
+  padding: 20px 20px 20px 110px;
+}
+.bottom-img{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+section.video-area{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.container-video{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.video-top{
+  position: relative;
+}
+.video-top-content{
+  text-align: center;
+  margin: 0 400px ;
 }
