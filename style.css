@@ -5,14 +5,14 @@ body{
 
 .wrapper {
   width: 100%;
-  height: 10000px;
+  height: 100%;
 }
 
 .bg-image {
-  background-image: url('http://hronika.info/uploads/posts/2016-10/1475953628_ga3.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed;
+  z-index: -5;
 }
 
 .logo{
@@ -78,12 +78,22 @@ nav.navbar.white-top-menu {
 .welcome-home{
   padding: 100px 0 50px 50px;
   font-size: 20px;
-  height: 800px;
   position: relative;
+}
+.top-area-bg::before {
+    background: rgba(255, 255, 255, 0.5) url('http://quomodosoft.com/html/drone/img/slider/home_main_bg.jpg') no-repeat fixed center center / cover;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: .3
 }
 .welcome-home-bgc{
   background-color: rgba(255, 255, 255, 0.5);
-
+  position: relative;
+  padding: 0px 0 280px;
 }
 .welcome-text{
   margin: 30px 50px;
@@ -518,16 +528,17 @@ width: 100px;
   color: #37a000;
   transition: .3s;
 }
-a .see-more{
+a .see-more-video{
   letter-spacing: 2px;
   color: #37a000;
   text-decoration: none;
   font-size: 22px;
   position: relative;
-  top: -30px;
-
 }
-a .see-more:hover i{
+.video-video-menu+a{
+  margin-top: -25px;
+}
+a .see-more-video:hover i{
   padding-left: 15px;
   transition: all 0.3s linear;
 }
@@ -539,7 +550,15 @@ section.product-area{
  position: relative;
 }
 .product-container{
-  bgc
+}
+.product-area-bg {
+  background: rgba(0, 0, 0, 0) url('http://quomodosoft.com/html/drone/img/product/product_area_bg.jpg') no-repeat fixed center center / cover;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 }
 .product-top-content{
   text-align: center;
@@ -765,48 +784,281 @@ a.add-to-cut:hover{
   transition: .7s;
 }
 -------------------------------------------------------
-.client-area{
+section.client-area{
+}
+.section-padding{
   padding: 100px 0 ;
   background-color: white;
 }
-.container-clirnt{
-  padding: 100px;
-}
 .client-area-title{
-  padding: 100px;
-
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
 }
 .client-top-content{
-  padding: 100px;
-
+  text-align: center;
 }
 .client-top-content p{
-  padding: 100px;
-
+  margin: 0 400px;
 }
 .client-top-content span{
-
+  font-weight: 700;
 }
 .client-top-content h2{
-
+  font-size: 36px;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  position: relative;
 }
 .client-top-content h2::before{
   background: #37a000;
-  bottom: 175px;
+  bottom: 10px;
   content: "";
   height: 2px;
   left: 50%;
-  margin-left: -50px;
+  margin-left: -25px;
   position: absolute;
   width: 50px;
 }
 .client-top-content h2::after{
   background: #37a000;
-  bottom: 165px;
+  bottom: 0px;
   content: "";
   height: 2px;
   left: 50%;
-  margin-left: -75px;
+  margin-left: -50px;
   position: absolute;
   width: 100px;
+}
+.client-area-list{
+  display: flex;
+  justify-content: space-around;
+  margin: 0 120px;
+}
+.client-area-list img{
+  width: 150px;
+  margin-right: 30px;
+}
+-------------------------------------------------------
+section.subscriber-area{
+  position: relative;
+}
+.section-padding-subscriber{
+  padding: 150px 0;
+  position: relative;
+}
+.subscriber-area-bg{
+  background: rgba(0, 0, 0, 0) url('http://quomodosoft.com/html/drone/img/subscriber_bg.jpg') no-repeat fixed center center / cover;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+.subscriber-bg-drone{
+  position: absolute;
+  top: -175px;
+}
+.subscriber-area-bg::after {
+  background: #37a000 none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.subscriber-left{
+  position: relative;
+margin-right: 100px;
+}
+.subscriber-left h3, .subscriber-left h2{
+  font-size: 30px;
+  letter-spacing: 2px;
+  position: relative;
+}
+.subscriber-left h3::before, .subscriber-left h2::before{
+  background: #fff;
+  content: "";
+  height: 3px;
+  left: 0;
+  position: absolute;
+  top: -10px;
+  width: 50px;
+}
+.subscriber-left h2{
+  font-weight: 700;
+}
+.subscriber-left h2::before{
+  bottom: -10px;
+  left: auto;
+  right: 0;
+  top: auto;
+  width: 30%;
+}
+.subscriber-content{
+  display: flex;
+  flex-direction: row;
+  color: white;
+  justify-content: space-between;
+}
+.subscriber-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100px;
+  width: 50%
+}
+.subscriber-right p{
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+.subscriber-right form{
+  background: rgba(255, 255, 255, 0.8) none repeat scroll 0 0;
+  height: 50px;
+  position: relative;
+  width: 100%;
+}
+label.sub-lb{
+  position: absolute;
+  text-align: right;
+  top: -28px;
+  right: 10%;
+}
+.subscriber-right form input{
+  background: rgba(255, 255, 255, 0.6) none repeat scroll 0 0;
+  border: 0 none;
+  color: #37a000;
+  height: 100%;
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.subscriber-right form button{
+  background: #fff none repeat scroll 0 0;
+  border: 0 none;
+  color: #37a000;
+  font-weight: 700;
+  height: 100%;
+  letter-spacing: 5px;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+  top: 0;
+  transition: all 0.3s ease 0s;
+  width: 30%;
+}
+.subscriber-right form button:hover{
+  color: white;
+  background-color: #37A000;
+}
+----------------------------------------------------------------
+div.footer-area{
+
+}
+.footer-top-area{
+  background: #F3F3F3;
+  color: #5b5a5a;
+}
+.footer-area a {
+    color: #5b5a5a;
+}
+.content-footer-top{
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+.content-footer-top h4{
+  font-size: 20px;
+  letter-spacing: 4px;
+  padding-bottom: 40px;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  color: #333333;
+}
+.technology{
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+.technology-contemt h4{
+  padding-bottom: 20px;
+}
+.foto-technology img{
+  width: 100px;
+  margin-left: 5px;
+}
+.foto-technology ul{
+  display: flex;
+}
+.find-us-content{
+  display: flex;
+  flex-direction: column;
+}
+.contact-details p{
+  padding: 5px 0 0 20px;
+}
+.contact-details li:first-child p{
+  padding-left: 30px;
+  margin: -10px 50px 0 0;
+}
+.contact-details li{
+  display: block;
+  margin-bottom: 15px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+}
+.f_contact_icon{
+  font-size: 24px;
+  left: 0;
+}
+.footer-area ul li a i {
+  font-size: 25px;
+  padding: 0 15px 20px 0;
+  top: 4px;
+  position: relative;
+}
+.footer-area ul li a:hover{
+  color: #37a000;
+}
+.footer-area a{
+  text-decoration: none;
+}
+.bef-aft h4::after,.bef-aft h4::before{
+  background: #37a000 none repeat scroll 0 0;
+  bottom: -4px;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  width: 70px;
+}
+.bef-aft h4::before{
+  bottom: 35px;
+  width: 35px;
+}
+.bef-aft h4::after{
+  bottom: 25px;
+}
+
+.footer-copyright-social-bookmark ul{
+  display: flex;
+  margin: 10px 0 -5px 0;
+}
+.footer-copyright-social-bookmark{
+ display: flex;
+ justify-content: center;
+}
+.footer-copyright p{
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
